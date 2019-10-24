@@ -1,6 +1,9 @@
 # RikkaMusic
 Android 仿网易云音乐App
 
+# Blog地址：
+https://blog.csdn.net/rikkatheworld/article/details/102700463
+
 # 效果展示
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161112604.gif)   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161224642.gif)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161707183.gif)     ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019102416212642.gif)
