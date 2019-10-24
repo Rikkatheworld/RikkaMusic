@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".main.mvp.view.PlayListRecommendActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:background="@color/colorPrimary">
+
+        <include
+            layout="@layout/common_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_30" />
+    </RelativeLayout>
+
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab_type"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@id/rl_title"
+        app:tl_indicator_color="#2196f3"
+        app:tl_indicator_height="@dimen/dp_2"
+        app:tl_indicator_width="@dimen/dp_20"
+        app:tl_tab_space_equal="false"
+        app:tl_textBold="SELECT"
+        app:tl_textSelectColor="#343434"
+        app:tl_textUnselectColor="#7F7F7F"
+        app:tl_textsize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tab_type"
+        android:background="#f0f0f0"/>
+
+
+    <com.rikkathewrold.rikkamusic.widget.PlayListRecommendViewPager
+        android:id="@+id/vp_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_gap"
+        android:overScrollMode="always"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</RelativeLayout>

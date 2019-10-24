@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dj.mvp.view.RadioCatActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:background="@color/colorPrimary">
+
+        <include
+            layout="@layout/common_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_30" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center"
+        android:text="全部分类"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_20"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_cat"
+        android:layout_marginTop="@dimen/dp_10" />
+</RelativeLayout>

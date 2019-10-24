@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_et"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_edit_title"
+        android:hint="大家都在搜"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_16"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_10"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:background="#f0f0f0" />
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".login.mvp.view.LoginActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/common_title"></include>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:hint="@string/input_phone"
+        android:maxLength="11"
+        android:inputType="number"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColorHint="#c9c9c9"
+        android:textColor="#333333"/>
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:ellipsize="end"
+        android:hint="@string/input_pwd"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColorHint="#c9c9c9"
+        android:textColor="#333333"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@id/et_pwd"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/login"
+        android:background="@drawable/shape_btn_login_confirm"
+        android:textColor="#ffffff"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60"/>
+
+    <TextView
+        android:id="@+id/forget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/forget_pwd"
+        android:layout_marginTop="@dimen/dp_30"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:text="@string/register"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/dp_30"/>
+</RelativeLayout>

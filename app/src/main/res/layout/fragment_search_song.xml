@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/rl_playall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/iv_playall"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:src="@drawable/shape_playall" />
+
+            <TextView
+                android:id="@+id/tv_playall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_playall"
+                android:text="@string/playall"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_17" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/rl_top"
+        android:background="#f0f0f0"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_song_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_gap"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10" />
+</RelativeLayout>

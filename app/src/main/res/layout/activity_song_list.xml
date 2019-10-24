@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#636363" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_song_playlist">
+
+            <RelativeLayout
+                android:id="@+id/rl_list_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35">
+
+                <RelativeLayout
+                    android:id="@+id/rl_play_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50">
+
+                    <ImageView
+                        android:id="@+id/iv_play_mode"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_25"
+                        android:src="@drawable/shape_list_cycle" />
+
+                    <TextView
+                        android:id="@+id/tv_play_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_toEndOf="@id/iv_play_mode"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_15" />
+
+                    <ImageView
+                        android:id="@+id/iv_trash_can"
+                        android:layout_width="@dimen/dp_23"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_25"
+                        android:src="@drawable/shape_trashcan" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_gap"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@id/rl_list_title"
+                android:background="#f0f0f0" />
+
+            <com.rikkathewrold.rikkamusic.widget.MaxHeightRecyclerView
+                android:id="@+id/rv_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_list_title"
+                android:layout_marginTop="@dimen/dp_3"
+                app:maxHeight="@dimen/dp_300" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

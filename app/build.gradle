@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.rikkathewrold.rikkamusic"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    greendao {
+        //版本号，升级时可以配置
+        schemaVersion 1
+        //生成的DAO，DaoMaster和DaoSession的加密包路径。默认与表实体所在的包路径相同
+        daoPackage 'com.rikkathewrold.rikkamusic.greendao.db'
+        //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
+        targetGenDir 'src/main/java'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+
+    // 网络请求框架
+    // OkHttp + Retrofit + RxJava + RxAndroid + Gson
+    api 'com.squareup.okhttp3:okhttp:3.12.1'
+    api 'com.squareup.retrofit2:retrofit:2.6.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    api 'io.reactivex.rxjava2:rxjava:2.2.7'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    api 'com.google.code.gson:gson:2.8.5'
+
+    // 黄油刀
+    api 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+    // Log、吐司打印
+    api 'com.hjq:toast:6.0'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.9.9.1'
+    // 图片加载框架、写的比我好的自定义View
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api 'de.hdodenhof:circleimageview:3.0.0'
+    api 'com.youth.banner:banner:1.4.10'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    api 'jp.wasabeef:glide-transformations:4.0.1'
+    // CookieJar
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    // 音视频请求框架:StarrySkyJava
+    api 'com.lzx:StarrySkyJava:2.1.9'
+    // EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    // greendao
+    api 'org.greenrobot:greendao:3.2.2'
+    //工具类
+    api 'com.blankj:utilcode:1.20.4'
+    //沉侵式状态栏
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+}

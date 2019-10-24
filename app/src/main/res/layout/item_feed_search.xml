@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_feed"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_95"
+    android:background="#ffffff"
+    android:paddingTop="@dimen/dp_7"
+    android:paddingBottom="@dimen/dp_7">
+
+    <com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView
+        android:id="@+id/iv_cover"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_12"
+        android:scaleType="centerCrop"
+        app:roundRatio="0.025" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toEndOf="@id/iv_cover">
+
+        <TextView
+            android:id="@+id/tv_mv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:background="@drawable/shape_mv_text"
+            android:paddingStart="@dimen/dp_7"
+            android:paddingEnd="@dimen/dp_7"
+            android:text="MV"
+            android:textColor="#B53D32"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_mv"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_13"
+            />
+
+        <TextView
+            android:id="@+id/tv_creator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/dp_4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_11" />
+    </RelativeLayout>
+</RelativeLayout>

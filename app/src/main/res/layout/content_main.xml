@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/ic_nav"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_13"
+                app:srcCompat="@drawable/shape_drawer" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:layout_toStartOf="@id/iv_search"
+                android:layout_toEndOf="@id/ic_nav"
+                app:tabIndicatorHeight="0dp" />
+
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dp_13"
+                app:srcCompat="@drawable/shape_search"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.rikkathewrold.rikkamusic.widget.BottomSongPlayBar
+        android:id="@+id/bottom_controller"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_controller"
+        android:layout_below="@+id/title"
+        android:overScrollMode="always" />
+</RelativeLayout>

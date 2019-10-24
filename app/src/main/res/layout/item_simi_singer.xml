@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_simi"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="wrap_content">
+
+    <com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView
+        android:id="@+id/iv_cover"
+        android:layout_width="@dimen/dp_85"
+        android:layout_height="@dimen/dp_85"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        app:roundRatio="0.08" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_cover"
+        android:layout_marginTop="@dimen/dp_2"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dp_3"
+        android:paddingEnd="@dimen/dp_3"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_11"/>
+</RelativeLayout>

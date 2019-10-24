@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MusicDrawerItemView">
+        <attr name="item_icon" format="reference" />
+        <attr name="item_name" format="reference" />
+        <attr name="is_show_gap" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MineItemView">
+        <attr name="icon" format="reference" />
+        <attr name="name" format="reference" />
+        <attr name="show_gap" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RikkaRoundRectView">
+        <attr name="roundRatio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LyricView">
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_divider" format="dimension"/>
+        <attr name="normal_color" format="reference|color"/>
+        <attr name="current_color" format="reference|color"/>
+        <attr name="default_label" format="string"/>
+        <attr name="lrc_padding" format="dimension"/>
+        <attr name="timeline_color" format="reference|color"/>
+        <attr name="time_color" format="reference|color"/>
+        <attr name="time_text_size" format="dimension"/>
+        <attr name="text_gravity">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

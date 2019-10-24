@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".song.mvp.view.SongDetailActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#636363" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_song_detail"
+            android:paddingBottom="@dimen/dp_5">
+
+            <RelativeLayout
+                android:id="@+id/rl_songinfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_80">
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_centerVertical="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/iv_cover"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_15">
+
+                    <TextView
+                        android:id="@+id/tv_songname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_singer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_songname"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:textColor="#838383"
+                        android:textSize="@dimen/sp_13" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_gap"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@id/rl_songinfo"
+                android:background="#f0f0f0" />
+
+            <RelativeLayout
+                android:id="@+id/rl_songinfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_gap"
+                android:layout_marginTop="@dimen/dp_5">
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_nextplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_nextplay"
+                    app:item_name="@string/next_play" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_nextplay"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_collect"
+                    app:item_name="@string/collect" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_download"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_collect"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_download_black"
+                    app:item_name="@string/download" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_commend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_download"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_comment_black"
+                    app:item_name="@string/comment" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_commend"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_share_black"
+                    app:item_name="@string/share" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_share"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_singer"
+                    app:item_name="@string/singer" />
+
+                <com.rikkathewrold.rikkamusic.widget.MusicDrawerItemView
+                    android:id="@+id/md_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_below="@id/md_singer"
+                    app:is_show_gap="true"
+                    app:item_icon="@drawable/ic_watch_view"
+                    app:item_name="@string/watch_video" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

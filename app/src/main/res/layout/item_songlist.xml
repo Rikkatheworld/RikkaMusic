@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_song"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@id/rl_top">
+
+        <RelativeLayout
+            android:id="@+id/rl_cover_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView
+                android:id="@+id/iv_songcover"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:scaleType="fitXY"
+                app:roundRatio="0.1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/iv_songnumber"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:textColor="#999999"
+                android:textSize="@dimen/sp_17"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_toStartOf="@id/iv_songdetail"
+            android:layout_toEndOf="@id/rl_cover_number"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_songname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/iv_phone"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:src="@drawable/shape_phone"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/iv_phone"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/sp_11" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_songdetail"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_10"
+            app:srcCompat="@drawable/ic_songinfo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:layout_below="@id/rl_content" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_playlist"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_165"
+    android:layout_rowWeight="1"
+    android:layout_weight="1"
+    android:padding="@dimen/dp_8">
+
+    <com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView
+        android:id="@+id/iv_playlist"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_110"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/shape_stoke"
+        app:roundRatio="0.06" />
+
+    <TextView
+        android:id="@+id/tv_playlist_name"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_playlist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_12" />
+</RelativeLayout>

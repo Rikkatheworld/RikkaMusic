@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_album"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_70"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_5">
+
+    <!--<com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView-->
+    <!--android:id="@+id/iv_cover"-->
+    <!--android:layout_width="@dimen/dp_55"-->
+    <!--android:layout_height="@dimen/dp_55"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginStart="@dimen/dp_12"-->
+    <!--app:roundRatio="0.03" />-->
+
+    <include
+        android:id="@+id/iv_album"
+        layout="@layout/layout_album"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toEndOf="@id/iv_album"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tv_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_toEndOf="@id/iv_album"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_13"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toEndOf="@id/tv_singer"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_13" />
+
+</RelativeLayout>

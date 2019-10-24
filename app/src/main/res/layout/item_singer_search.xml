@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_60"
+    android:id="@+id/rl_singer">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_singeravatar"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tv_singername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_17"
+        android:textColor="#333333"
+        android:layout_toEndOf="@id/iv_singeravatar"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_15"
+        />
+</RelativeLayout>

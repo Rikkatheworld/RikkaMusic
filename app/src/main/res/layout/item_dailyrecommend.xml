@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_64"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_7" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@id/rl_top">
+
+        <com.rikkathewrold.rikkamusic.widget.RikkaRoundRectView
+            android:id="@+id/iv_songcover"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:scaleType="fitXY"
+            app:roundRatio="0.1" />
+
+        <LinearLayout
+            android:id="@+id/ll_song"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_toStartOf="@id/iv_songdetail"
+            android:layout_toEndOf="@id/iv_songcover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_songname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dp_3"
+                android:singleLine="true"
+                android:text="当爱已成往事"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="李宗盛"
+                android:textColor="#838383"
+                android:textSize="@dimen/sp_11" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_songdetail"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_songinfo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_7"
+        android:layout_below="@id/rl_content" />
+</RelativeLayout>

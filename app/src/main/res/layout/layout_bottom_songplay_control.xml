@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bottom_controller"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:layout_alignParentBottom="true"
+    android:background="#CCffffff">
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f0f0f0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_gap">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_5"
+            android:src="@drawable/shape_record" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_controller"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/ic_bottom_controller" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_play"
+            android:layout_width="@dimen/dp_27"
+            android:layout_height="@dimen/dp_27"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_toStartOf="@+id/iv_bottom_controller"
+            android:src="@drawable/shape_play" />
+
+        <LinearLayout
+            android:id="@+id/ll_songinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@id/iv_bottom_play"
+            android:layout_toEndOf="@id/iv_cover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_songname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="还没有歌曲哦~"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="快来找找歌听8~"
+                android:textColor="#838383"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
