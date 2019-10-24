@@ -555,7 +555,7 @@ public class SongActivity extends BaseActivity<SongPresenter> implements SongCon
 
     @Override
     public void onGetLyricFail(String e) {
-        LogUtil.e(TAG, "onGetLyricFail: " + e);
+        LogUtil.e(TAG, "onGetLyricFail:" + e);
         ToastUtils.show(e);
     }
 
