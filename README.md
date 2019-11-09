@@ -5,6 +5,7 @@ Android 仿网易云音乐App
 https://blog.csdn.net/rikkatheworld/article/details/102700463
 
 # 效果展示
+注：因为图片比较模糊，所以日推、歌单、个人信息的AppBarLayout上的圆角没有好好的显示出来
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161112604.gif)   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161224642.gif)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024161707183.gif)     ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019102416212642.gif)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191024162346269.gif)  ![在这里插入图片描述](https://img-blog.csdnimg.cn/2019102416244951.gif)
